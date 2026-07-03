@@ -286,7 +286,60 @@ ul {
 }
 
 /* TODO: schedule */
+.schedule-title {
+    text-align: center;
+    margin-bottom: var(--space-5);
+}
 
+.schedule-table-wrapper {
+    width: 100%;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: var(--fs-body);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.schedule-table th {
+    font-family: var(--font-heading);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none; /* Clean bottom edge look */
+}
+
+.time-col {
+    color: var(--color-accent);
+    font-weight: 600;
+    white-space: nowrap;
+    width: 15%;
+}
+
+.session-col {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.speaker-col {
+    color: var(--color-text-muted);
+}
 /* TODO: speakers */
 
 /* TODO: tickets / CTA */
@@ -321,6 +374,7 @@ ul {
     .card-featured {
         grid-column: span 2;
     }
+    
 }
 /*desktop adjustments*/
 @media (min-width: 1120px) { 
