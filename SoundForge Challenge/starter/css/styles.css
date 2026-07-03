@@ -227,6 +227,63 @@ ul {
     color: var(--color-primary-hover);
 }
 /* TODO: about + feature cards */
+.about {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: var(--space-5);
+}
+
+.section-title {
+    font-size: var(--fs-h2);
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+}
+
+.about-intro {
+    font-size: var(--fs-body);
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-2);
+}
+
+.card-title {
+    font-size: var(--fs-h3);
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+}
+
+.card-text {
+    font-size: var(--fs-small);
+    color: var(--color-text-muted);
+}
 
 /* TODO: schedule */
 
@@ -257,11 +314,24 @@ ul {
     .btn {
         width: auto;
     }
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+    .card-featured {
+        grid-column: span 2;
+    }
 }
 /*desktop adjustments*/
 @media (min-width: 1120px) { 
     .hero {
         padding-top: var(--space-7);
         padding-bottom: var(--space-7);
+    }
+    .about-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+    .card-featured {
+        grid-column: span 1; 
     }
 }
